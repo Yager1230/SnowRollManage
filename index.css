@@ -1,0 +1,29 @@
+.show-table {
+  border: 1px solid black;
+  width: 1200px;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+}
+
+.container-box {
+  padding-top: 20px;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 2px 0;
+}
+
+#signedTable {
+  width: 500px;
+}
+
+.button-container {
+  padding-bottom: 10px;
+}

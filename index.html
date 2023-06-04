@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <button style="display: none;" id="requestBox">获取机器人社群信息列表</button>
+  <div class="container-box">
+    <button id="channelBox">获取指定频道概览信息</button>
+    <input id="islandIdInpt" style="width: 200px;" type="text" placeholder="请填写社群Id如：208147">
+    <input id="channelNameInpt" style="width: 200px;" type="text" placeholder="请填写频道名称如：签到打卡">
+  </div>
+
+  <div style="padding: 20px; width: 1500px;">
+    <ul id="channelIdBox">
+      <li>请输入社群id和频道名称，输入后请点击上方按钮。</li>
+    </ul>
+  </div>
+
+  <div class="button-container">
+    <button id="signMessageBox">发送签到信息</button>
+    <input type="text" id="signContentInpt" placeholder="请输入签到消息">
+    <p style="padding-left: 20px;" id="messageIdContainer">请发送签到信息</p>
+  </div>
+
+  <div class="button-container">
+    <p>
+      <span>注：使用表情回复刚才发送的信息，或之前发送的信息后再点击‘获取已签到人信息’按钮；签到只支持了最右上角的笑脸emoj，其余的将不被识别，可拓展</span>
+    </p>
+    <button id="signedMemberBox">获取已签到人信息</button>
+    <input style="width: 300px;" type="text" id="signedMessageIdInpt" placeholder="请填写消息id，不输入则默认使用刚发送的的消息id">
+  </div>
+
+  <div class="button-container">
+    <input type="checkbox" id="historyCheckbox">
+    <span>展示历史已发送消息 (关闭浏览器后清除)</span>
+  </div>
+
+  <div class="button-container">
+    <table id="historyTable"></table>
+  </div>
+
+  <h3>已签到人员列表</h3>
+  <span>(最大规格100，可拓展)</span>
+  <button id="exportXlsxButton">导出人员列表xlsx文件</button>
+  <input id="importXlsxButton" type="file">
+  <button id="setCoinTest">发放积分（测试）</button>
+  <table id="signedTable">
+    <thead>
+      <th>消息内容</th>
+      <th>消息Id</th>
+      <th>积分操作</th>
+    </thead>
+    <tbody id="signedTableBody"></tbody>
+    <select id="coinSelector" style="width: 100px;">
+      <option value="1">增加</option>
+      <option value="2">减少</option>
+    </select>
+  </table>
+  <script type="text/javascript" src="https://cdn.staticfile.org/xlsx/0.15.1/xlsx.core.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
